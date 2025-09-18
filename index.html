@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <!---css file-->
+ <link rel="icon" type="image/png" sizes="32x32" href="https://taupe-fairy-205670.netlify.app/favicon-32x32.png">
+ <link rel="stylesheet" href="styles.css" type="text/css" media="all" />
+    <title>Terminal Breach</title>
+</head>
+<body>
+ <h2>👁Terminal Breach👁</h2>
+
+ <div id="messages">
+
+ </div>
+
+ <div id="input">
+<input type="text"  id="text" placeholder="Type a message..." />
+<button type="button" onclick="send()">send</button>
+ </div>
+
+<div id="ghostMeter" style="color:#0f0; font-family: monospace; margin:5px 0;">👁️ Ghost Activity: [█████-----] 50%
+<div class="downloadBar" id="downloadBar">
+   <div class="progressRing" id="progressRing">
+   <i class="fas fa-download download-icon"></i>
+   </div> 
+  <div class="progressText" id="progressText"></div>
+    
+</div>
+
+</div>
+   <div id="imageContainer"></div>
+<div id="warningFlash" style="
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  height:100%;
+  background:rgba(255,0,0,0.85);
+  color:#fff;
+  font-size:3em;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  z-index:9999;
+  font-family:monospace;
+  text-shadow: 0 0 10px #fff;
+">
+  UNAUTHORIZED INTRUSION DETECTED
+</div> 
+ 
+ <div id="systemLog" style="
+  position:fixed;
+  bottom:0;
+  font-family:courier;
+  border:1px solid #0f0;
+  left:0;
+  width:100%;
+  background:#000;
+  color:#0f0;
+  padding:5px;
+  font-size:0.8em;
+  font-family:monospace;
+  overflow:auto;
+  max-height:120px;
+  z-index:5000;
+"></div>
+<!--script file--->    
+<script src="script.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

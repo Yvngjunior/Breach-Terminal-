@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Courier;
+}
+body{
+ height: 100vh;
+ background: linear-gradient(to left,#000,#170015,#001813);
+ overflow: hidden;
+ transition: all 0.3s ease;
+}
+h2{
+    color: #0f0;
+    text-align: center;
+    text-shadow: 0 3px 2px gray;
+}
+#messages{
+border: 1px solid #0f0;
+width: 340px;
+height: 300px;
+padding: 10px;
+margin-left: 10px;
+margin-top: 10px;
+overflow-y: auto;
+white-space: pre-wrap;
+word-break: break-word;
+color: #0f0;
+}
+#input{
+ margin-top: 10px;   
+ display: flex;
+ gap: 5px;
+}
+input[type=text]{
+ width: 80%;
+ color: #0f0; 
+ background: #000;
+ border: 1px solid #0f0;
+ border-radius: 4px;
+ padding: 5px 10px;
+ font-weight: 700;
+ margin-left: 8px;
+ font-size: 15px;
+}
+button{
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background: #000;
+    color: #0f0;
+    border: 1px solid #0f0;
+    text-transform: capitalize;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: Monospace;
+}
+.glitch{
+animation: glitch 0.2s infinite;
+}
+@keyframes glitch{
+    0%{
+   text-shadow: 2px 0 red,-2px 0 blue;     
+    }
+    50%{
+    text-shadow: -2px 0 red,2px 0 blue;         
+    }
+    100%{
+   text-shadow: 2px 0 red,-2px 0 blue;          
+    }
+}
+.flicker{
+    animation: flicker 0.1s infinite;
+}
+@keyframes flicker{
+0%,100%{
+   opacity: 1;   
+}
+50%{
+    opacity: 0.7;
+}
+}
+
+#imageContainer img {
+  animation: glitch 0.3s infinite;
+}
+
+  .disp{
+    margin-top: 5px;
+    margin-left: 10px;
+    display: block;
+    width: 80px;
+    margin: 5px;
+    border: 1px solid #0f0;
+    width: 90%;
+    display: block;
+}
+@keyframes glitch {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(2px, -2px); }
+  50% { transform: translate(-2px, 2px); }
+  75% { transform: translate(2px, 2px); }
+  100% { transform: translate(0, 0); }
+}
+#systemLog{
+    color: #0B1B0D;
+    padding: 10px 20px;
+}
+body.flicker {
+  filter: contrast(200%) hue-rotate(90deg);
+}
+
+.downloadBar{
+    margin-top: 5px;
+    margin-left: 3px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+.progressRing{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(#276331 0deg,#568854 0deg);
+    margin-left: 10px;
+    
+}
+.progressRing::before{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #50A991;
+    border-radius: 50%;
+    
+}
+.download-icon{
+    position: absolute;
+    font-size: 15px;
+    z-index: 2;
+    color: #001803;
+    animation: pulse 1s infinite;
+}
+.progressText{
+    font-size: 13px;
+    margin-top: 2px;
+    margin-left: 6px;
+}
+@keyframes pulse {
+    0%{
+   transform: scale(1); 
+   opacity: 1;
+    }
+      50%{
+    transform: scale(1.15); 
+   opacity:0.8;        
+    }
+      100%{
+    transform: scale(1); 
+   opacity:1;        
+    }
+}
